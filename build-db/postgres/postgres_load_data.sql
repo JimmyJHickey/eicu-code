@@ -3,9 +3,8 @@
 -- Load data from compressed files into the schema
 --
 -- -------------------------------------------------------------------------------
-
 -- Change to the directory containing the data files
-\cd :datadir
+\cd '/mnt/c/Users/jimmy/home/git/eicu-code/build-db/postgres/eicu_data/'
 
 --------------------------------------------------------
 --  Load Data for Table ADMISSIONDRUG

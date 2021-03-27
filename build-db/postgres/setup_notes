@@ -1,0 +1,25 @@
+
+sudo -u postgres psql -p 5432 -h 127.0.0.1
+
+\c eicu
+
+SET search_path TO EICU;
+
+\set datadir 'C:/Users/jimmy/home/git/eicu-code/build-db/postgres/eicu_data/'
+\set datadir '/mnt/c/Users/jimmy/home/git/eicu-code/build-db/postgres/eicu_data/'
+
+
+\i 'C:/Users/jimmy/home/git/eicu-code/build-db/postgres/postgres_load_data.sql'
+\i '/mnt/c/Users/jimmy/home/git/eicu-code/build-db/postgres/postgres_load_data.sql'
+
+
+\copy ADMISSIONDRUG FROM 'C:/Users/jimmy/home/git/eicu-code/build-db/postgres/eicu_data/admissionDrug.csv' DELIMITER ',' CSV HEADER NULL ''
+
+https://eicu-crd.mit.edu/tutorials/install_eicu_locally/#2-place-the-csv-data-files-in-a-local-directory
+
+
+https://dba.stackexchange.com/questions/29767/permission-denied-in-file-trying-to-import?newreg=391df32a25bb488bb0c9888b90b44c18
+https://stackoverflow.com/questions/36959/how-do-you-use-script-variables-in-psql/3588796#3588796
+
+
+https://stackoverflow.com/questions/38368318/installing-a-pip-package-from-within-a-jupyter-notebook-not-working
